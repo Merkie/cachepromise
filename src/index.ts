@@ -1,4 +1,3 @@
-// cache.ts
 interface CacheOptions {
   key: string;
   ttl: string | number;

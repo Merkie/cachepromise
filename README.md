@@ -7,7 +7,7 @@ A lightweight, type-safe in-memory cache for Promises with TTL (Time To Live) su
 const users = await db.users.findMany({});
 
 // after:
-import { cache } from "cachepromise";
+import { cache } from "@merkie/cachepromise";
 
 const users = await cache(db.users.findMany({}), {
   key: "users",
@@ -27,7 +27,7 @@ const users = await cache(db.users.findMany({}), {
 ## Installation
 
 ```bash
-npm install cachepromise
+npm install @merkie/cachepromise
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ npm install cachepromise
 ### Basic Usage
 
 ```typescript
-import { cache } from "cachepromise";
+import { cache } from "@merkie/cachepromise";
 
 // Function that makes an expensive API call
 async function fetchUserData(userId: string) {
@@ -100,7 +100,7 @@ import {
   invalidateCache,
   invalidateAllExpiredCacheEntries,
   clearCache,
-} from "cachepromise";
+} from "@merkie/cachepromise";
 
 // Invalidate specific entry
 invalidateCache("user-123");
@@ -118,7 +118,7 @@ clearCache("users");
 ### Advanced Usage with Cache Class
 
 ```typescript
-import { Cache } from "cachepromise";
+import { Cache } from "@merkie/cachepromise";
 
 const userCache = Cache.getInstance("users");
 

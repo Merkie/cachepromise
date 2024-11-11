@@ -1,5 +1,5 @@
 {
-  "name": "cachepromise",
+  "name": "@merkie/cachepromise",
   "version": "1.0.0",
   "description": "A simple in-memory cache with TTL support",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "ttl",
     "typescript"
   ],
-  "author": "Merkie",
+  "author": "merkie",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.0",
