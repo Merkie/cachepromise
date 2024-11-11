@@ -2,6 +2,19 @@
 
 A lightweight, type-safe in-memory cache for Promises with TTL (Time To Live) support. Perfect for caching expensive API calls, database queries, or any asynchronous operations.
 
+```typescript
+// before:
+const users = await db.users.findMany({});
+
+// after:
+import { cache } from "cachepromise";
+
+const users = await cache(db.users.findMany({}), {
+  key: "users",
+  ttl: "5m",
+});
+```
+
 ## Features
 
 - 🚀 Simple and lightweight
